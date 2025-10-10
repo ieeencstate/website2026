@@ -4,39 +4,41 @@ import {
   Column,
   Row,
   Card,
-  Button,
   Badge,
 } from "@once-ui-system/core";
 import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
 
 export default function Scholarship() {
   return (
     <Container padding="l">
-      <Column fillWidth padding="l" gap="xl">
+      <Column fillWidth padding="0" gap="xl">
         {/* Hero Section */}
-        <Column 
-          maxWidth="xl" 
-          padding="xl" 
-          gap="l" 
-          align="center"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        >
-          <Heading variant="display-strong-xl" className="nc-state-red">
-            Dr. Stancil/IEEE Scholarship
-          </Heading>
-          <Text
-            variant="heading-default-l"
-            onBackground="neutral-weak"
-            wrap="balance"
+        <Section padding="xl">
+          <Column 
+            maxWidth="xl" 
+            gap="l" 
             align="center"
-            style={{ maxWidth: "700px", margin: "0 auto" }}
+            style={{ textAlign: "center", margin: "0 auto" }}
           >
-            Recognizing and supporting exceptional ECE students who demonstrate academic excellence, leadership, and commitment to advancing technology for humanity.
-          </Text>
-        </Column>
+            <Heading variant="display-strong-xl" className="nc-state-red">
+              Dr. Stancil/IEEE Scholarship
+            </Heading>
+            <Text
+              variant="heading-default-l"
+              onBackground="neutral-weak"
+              wrap="balance"
+              align="center"
+              style={{ maxWidth: "700px", margin: "0 auto" }}
+            >
+              Recognizing and supporting exceptional ECE students who demonstrate academic excellence, leadership, and commitment to advancing technology for humanity.
+            </Text>
+          </Column>
+        </Section>
 
         {/* Scholarship Overview */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Row gap="xl" wrap>
             <Column gap="m" style={{ flex: "1", minWidth: "300px" }}>
               <Heading variant="heading-strong-l" className="nc-state-red">
@@ -54,7 +56,7 @@ export default function Scholarship() {
             </Column>
 
             <Column gap="m" style={{ flex: "1", minWidth: "300px" }}>
-              <Card padding="l" background="surface" border="neutral-alpha-weak">
+              <Card padding="l" background="surface" border="neutral-alpha-weak" className="feature-card" style={{ borderRadius: 20 }}>
                 <Column gap="m">
                   <div style={{ 
                     width: "60px", 
@@ -82,16 +84,18 @@ export default function Scholarship() {
               </Card>
             </Column>
           </Row>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Eligibility Criteria */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Heading variant="heading-strong-l" className="nc-state-red">
             Eligibility Criteria
           </Heading>
           
           <div className="auto-grid" style={{ width: "100%" }}>
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -115,7 +119,7 @@ export default function Scholarship() {
               </Column>
             </Card>
 
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -139,7 +143,7 @@ export default function Scholarship() {
               </Column>
             </Card>
 
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -165,7 +169,7 @@ export default function Scholarship() {
           </div>
 
           {/* Important Note */}
-          <Card padding="l" background="surface" border="neutral-alpha-weak">
+          <Card padding="l" background="surface" border="neutral-alpha-weak" className="feature-card" style={{ borderRadius: 20 }}>
             <Row gap="m" align="center">
               <div style={{ 
                 width: "40px", 
@@ -190,15 +194,17 @@ export default function Scholarship() {
               </Column>
             </Row>
           </Card>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Recent Recipient */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Heading variant="heading-strong-l" className="nc-state-red">
             Recent Recipient
           </Heading>
 
-          <Card padding="xl" background="surface" border="neutral-alpha-weak">
+          <Card padding="xl" background="surface" border="neutral-alpha-weak" className="feature-card" style={{ borderRadius: 20 }}>
             <Row gap="l" wrap style={{ alignItems: "center" }}>
               <div style={{ flex: "0 0 auto" }}>
                 {/* Recipient Avatar - using placeholder */}
@@ -246,16 +252,18 @@ export default function Scholarship() {
               </Column>
             </Row>
           </Card>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Application Process */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Heading variant="heading-strong-l" className="nc-state-red">
             Application Process
           </Heading>
 
           <Column gap="s">
-            <Card padding="l">
+            <Card padding="l" className="feature-card" style={{ borderRadius: 20 }}>
               <Row gap="m" align="center">
                 <div style={{
                   width: "30px",
@@ -282,7 +290,7 @@ export default function Scholarship() {
               </Row>
             </Card>
 
-            <Card padding="l">
+            <Card padding="l" className="feature-card" style={{ borderRadius: 20 }}>
               <Row gap="m" align="center">
                 <div style={{
                   width: "30px",
@@ -309,7 +317,7 @@ export default function Scholarship() {
               </Row>
             </Card>
 
-            <Card padding="l">
+            <Card padding="l" className="feature-card" style={{ borderRadius: 20 }}>
               <Row gap="m" align="center">
                 <div style={{
                   width: "30px",
@@ -336,77 +344,66 @@ export default function Scholarship() {
               </Row>
             </Card>
           </Column>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Call to Action */}
-        <Column 
-          maxWidth="l" 
-          padding="xl" 
-          background="surface"
-          border="neutral-alpha-weak"
-          radius="l"
-          gap="m"
-          align="center"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        >
-          <Heading variant="heading-strong-l">
-            Apply for the Scholarship
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
-            If you're an ECE student who demonstrates academic excellence and leadership impact, we encourage you to apply for this prestigious scholarship.
-          </Text>
-          <Row gap="m" wrap>
-            <div>
-              <a 
-                href="/contact" 
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    padding: "12px 24px",
-                    backgroundColor: "var(--nc-state-red, #CC0000)",
-                    color: "white",
-                    borderRadius: "8px",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                    transition: "opacity 0.2s"
-                  }}
-                  className="scholarship-cta-button"
+        <Section padding="xl" background="surface" border radius="l">
+          <Column 
+            maxWidth="l" 
+            gap="m"
+            align="center"
+            style={{ textAlign: "center", margin: "0 auto" }}
+          >
+            <Heading variant="heading-strong-l">
+              Apply for the Scholarship
+            </Heading>
+            <Text variant="body-default-l" onBackground="neutral-weak">
+              If you're an ECE student who demonstrates academic excellence and leadership impact, we encourage you to apply for this prestigious scholarship.
+            </Text>
+            <Row gap="m" wrap>
+              <Card padding="0" style={{ background: "transparent" }}>
+                <a 
+                  href="/contact" 
+                  style={{ textDecoration: "none" }}
                 >
-                  Contact for Application Info
-                </div>
-              </a>
-            </div>
-            <div>
-              <a 
-                href="/about" 
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
+                  <div className="modern-button" style={{
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
                     padding: "12px 24px",
-                    backgroundColor: "transparent",
+                    background: "linear-gradient(135deg, var(--brand-background-strong), var(--brand-background-medium))",
+                    color: "white",
+                    borderRadius: "12px",
+                    fontWeight: 600
+                  }}>
+                    Contact for Application Info
+                  </div>
+                </a>
+              </Card>
+              <Card padding="0" style={{ background: "transparent" }}>
+                <a 
+                  href="/about" 
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="modern-button" style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 24px",
+                    background: "transparent",
                     color: "var(--ieee-blue, #0066CC)",
                     border: "2px solid var(--ieee-blue, #0066CC)",
-                    borderRadius: "8px",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                    transition: "all 0.2s"
-                  }}
-                  className="scholarship-secondary-button"
-                >
-                  Learn About IEEE
-                </div>
-              </a>
-            </div>
-          </Row>
-        </Column>
+                    borderRadius: "12px",
+                    fontWeight: 600
+                  }}>
+                    Learn About IEEE
+                  </div>
+                </a>
+              </Card>
+            </Row>
+          </Column>
+        </Section>
       </Column>
     </Container>
   );

@@ -4,9 +4,9 @@ import {
   Column,
   Row,
   Card,
-  Button,
 } from "@once-ui-system/core";
 import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
 
 // Sponsors data from requirements
 const sponsors = [
@@ -95,37 +95,39 @@ function getSponsorIcon(industry: string) {
 export default function Sponsors() {
   return (
     <Container padding="l">
-      <Column fillWidth padding="l" gap="xl">
+      <Column fillWidth padding="0" gap="xl">
         {/* Hero Section */}
-        <Column 
-          maxWidth="xl" 
-          padding="xl" 
-          gap="l" 
-          align="center"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        >
-          <Heading variant="display-strong-xl" className="nc-state-red">
-            Our Sponsors
-          </Heading>
-          <Text
-            variant="heading-default-l"
-            onBackground="neutral-weak"
-            wrap="balance"
+        <Section padding="xl">
+          <Column 
+            maxWidth="xl" 
+            gap="l" 
             align="center"
-            style={{ maxWidth: "700px", margin: "0 auto" }}
+            style={{ textAlign: "center", margin: "0 auto" }}
           >
-            We're grateful for the support of industry leaders who share our commitment to advancing technology and fostering the next generation of engineers.
-          </Text>
-        </Column>
+            <Heading variant="display-strong-xl" className="nc-state-red">
+              Our Sponsors
+            </Heading>
+            <Text
+              variant="heading-default-l"
+              onBackground="neutral-weak"
+              wrap="balance"
+              align="center"
+              style={{ maxWidth: "700px", margin: "0 auto" }}
+            >
+              We're grateful for the support of industry leaders who share our commitment to advancing technology and fostering the next generation of engineers.
+            </Text>
+          </Column>
+        </Section>
 
         {/* Sponsor Value Proposition */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Heading variant="heading-strong-l" className="nc-state-red">
             Partnership Benefits
           </Heading>
           
           <div className="auto-grid" style={{ width: "100%" }}>
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -149,7 +151,7 @@ export default function Sponsors() {
               </Column>
             </Card>
 
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -173,7 +175,7 @@ export default function Sponsors() {
               </Column>
             </Card>
 
-            <Card padding="l" className="grid-card">
+            <Card padding="l" className="grid-card feature-card" style={{ borderRadius: 20 }}>
               <Column gap="m">
                 <div style={{ 
                   width: "50px", 
@@ -197,10 +199,12 @@ export default function Sponsors() {
               </Column>
             </Card>
           </div>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Current Sponsors */}
-        <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
+        <Section padding="xl">
+          <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
           <Heading variant="heading-strong-l" className="nc-state-red">
             Current Industry Partners
           </Heading>
@@ -210,7 +214,7 @@ export default function Sponsors() {
 
           <Column gap="m">
             {sponsors.map((sponsor, index) => (
-              <Card key={index} padding="l" border="neutral-alpha-weak">
+              <Card key={index} padding="l" border="neutral-alpha-weak" className="feature-card" style={{ borderRadius: 20 }}>
                 <Row gap="l" wrap style={{ alignItems: "center" }}>
                   {/* Sponsor Logo/Icon */}
                   <div style={{ flex: "0 0 auto" }}>
@@ -262,23 +266,18 @@ export default function Sponsors() {
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none" }}
                       >
-                        <div
-                          style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "6px",
-                            padding: "8px 16px",
-                            backgroundColor: "transparent",
-                            color: "var(--ieee-blue, #0066CC)",
-                            border: "1px solid var(--ieee-blue, #0066CC)",
-                            borderRadius: "6px",
-                            fontSize: "14px",
-                            fontWeight: "500",
-                            cursor: "pointer",
-                            transition: "all 0.2s"
-                          }}
-                          className="hover-blue-button"
-                        >
+                        <div className="modern-button" style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "8px",
+                          padding: "10px 20px",
+                          background: "transparent",
+                          color: "var(--ieee-blue, #0066CC)",
+                          border: "2px solid var(--ieee-blue, #0066CC)",
+                          borderRadius: "12px",
+                          fontSize: "14px",
+                          fontWeight: 600,
+                        }}>
                           Visit Website
                         </div>
                       </a>
@@ -288,7 +287,8 @@ export default function Sponsors() {
               </Card>
             ))}
           </Column>
-        </Column>
+          </Column>
+        </Section>
 
         {/* Sponsorship Tiers */}
         <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
@@ -408,74 +408,62 @@ export default function Sponsors() {
         </Column>
 
         {/* Call to Action */}
-        <Column 
-          maxWidth="l" 
-          padding="xl" 
-          background="surface"
-          border="neutral-alpha-weak"
-          radius="l"
-          gap="m"
-          align="center"
-          style={{ textAlign: "center", margin: "0 auto" }}
-        >
-          <Heading variant="heading-strong-l">
-            Partner With Us
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
-            Join our community of industry partners and help shape the future of electrical and computer engineering at NC State University.
-          </Text>
-          <Row gap="m" wrap>
-            <div>
-              <a 
-                href="/contact" 
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    padding: "12px 24px",
-                    backgroundColor: "var(--nc-state-red, #CC0000)",
-                    color: "white",
-                    borderRadius: "8px",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                    transition: "opacity 0.2s"
-                  }}
-                  className="hover-opacity"
+        <Section padding="xl" background="surface" border radius="l">
+          <Column 
+            maxWidth="l" 
+            gap="m"
+            align="center"
+            style={{ textAlign: "center", margin: "0 auto" }}
+          >
+            <Heading variant="heading-strong-l">
+              Partner With Us
+            </Heading>
+            <Text variant="body-default-l" onBackground="neutral-weak">
+              Join our community of industry partners and help shape the future of electrical and computer engineering at NC State University.
+            </Text>
+            <Row gap="m" wrap>
+              <Card padding="0" style={{ background: "transparent" }}>
+                <a 
+                  href="/contact" 
+                  style={{ textDecoration: "none" }}
                 >
-                  Become a Sponsor
-                </div>
-              </a>
-            </div>
-            <div>
-              <a 
-                href="/about" 
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
+                  <div className="modern-button" style={{
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
                     padding: "12px 24px",
-                    backgroundColor: "transparent",
+                    background: "linear-gradient(135deg, var(--brand-background-strong), var(--brand-background-medium))",
+                    color: "white",
+                    borderRadius: "12px",
+                    fontWeight: 600
+                  }}>
+                    Become a Sponsor
+                  </div>
+                </a>
+              </Card>
+              <Card padding="0" style={{ background: "transparent" }}>
+                <a 
+                  href="/about" 
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="modern-button" style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 24px",
+                    background: "transparent",
                     color: "var(--ieee-blue, #0066CC)",
                     border: "2px solid var(--ieee-blue, #0066CC)",
-                    borderRadius: "8px",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                    transition: "all 0.2s"
-                  }}
-                  className="hover-blue-button"
-                >
-                  Learn About IEEE
-                </div>
-              </a>
-            </div>
-          </Row>
-        </Column>
+                    borderRadius: "12px",
+                    fontWeight: 600
+                  }}>
+                    Learn About IEEE
+                  </div>
+                </a>
+              </Card>
+            </Row>
+          </Column>
+        </Section>
       </Column>
     </Container>
   );
