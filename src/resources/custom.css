@@ -1,54 +1,663 @@
-/* :root {
-  /*
-  /* Example setup for custom colors */
-  /* Generate at: https://once-ui.com/customize */
-  /*
-  --scheme-brand-100: #08002f;
-  --scheme-brand-200:  #04025c;
-  --scheme-brand-300:  #1f398e;
-  --scheme-brand-400:  #3856ae;
-  --scheme-brand-500:  #5071cc;
-  --scheme-brand-600:  #6f94f1;
-  --scheme-brand-700:  #8db3ff;
-  --scheme-brand-800:  #b2dbff;
-  --scheme-brand-900:  #bfe8ff;
-  --scheme-brand-1000: #ccf6ff;
-  --scheme-brand-1100: #d2fcff;
-  --scheme-brand-1200: #d2fcff;
-  --scheme-brand-600-10: rgba(111,148,241,0.1);
-  --scheme-brand-600-30: rgba(111,148,241,0.3);
-  --scheme-brand-600-50: rgba(111,148,241,0.5);
+/* Responsive horizontal row for student leaders */
+.student-leaders-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+}
 
-  --scheme-accent-100:  #030b10;
-  --scheme-accent-200:  #0d181d;
-  --scheme-accent-300:  #364248;
-  --scheme-accent-400:  #505d64;
-  --scheme-accent-500:  #69777e;
-  --scheme-accent-600:  #8a989f;
-  --scheme-accent-700:  #a8b7bf;
-  --scheme-accent-800:  #c8d7df;
-  --scheme-accent-900:  #d5e4ec;
-  --scheme-accent-1000: #e2f1f9;
-  --scheme-accent-1100: #e9f8ff;
-  --scheme-accent-1200: #efffff;
-  --scheme-accent-600-10: rgba(138,152,159,0.1);
-  --scheme-accent-600-30: rgba(138,152,159,0.3);
-  --scheme-accent-600-50: rgba(138,152,159,0.5);
+.student-leader-card {
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 320px;
+  margin: 16px;
+  text-align: center;
+  height: fit-content;
+}
 
-  --scheme-neutral-100:  #020b10;
-  --scheme-neutral-200:  #0b181d;
-  --scheme-neutral-300:  #344248;
-  --scheme-neutral-400:  #4f5d64;
-  --scheme-neutral-500:  #68777e;
-  --scheme-neutral-600:  #89989f;
-  --scheme-neutral-700:  #a7b7be;
-  --scheme-neutral-800:  #c7d7df;
-  --scheme-neutral-900:  #d4e4ec;
-  --scheme-neutral-1000: #e1f2f9;
-  --scheme-neutral-1100: #e7f8ff;
-  --scheme-neutral-1200: #eeffff;
-  --scheme-neutral-600-10: rgba(137,152,159,0.1);
-  --scheme-neutral-600-30: rgba(137,152,159,0.3);
-  --scheme-neutral-600-50: rgba(137,152,159,0.5);
-  /*
-}*/
+@media (max-width: 768px) {
+  .student-leader-card {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsive horizontal row for features section */
+.features-row-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Generic auto-grid utility for wrapping cards */
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Specific tuning for leaders grid (slightly narrower cards) */
+.leaders-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Specific tuning for features grid (wider cards) */
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Fixed 4-column grid that collapses responsively */
+.grid-4-fixed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .grid-4-fixed { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .grid-4-fixed { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .grid-4-fixed { grid-template-columns: 1fr; }
+}
+/* NC State Colors - Red, White, Black theme */
+:root {
+  /* NC State Red Brand Colors */
+  --nc-state-red: #CC0000;
+  --nc-state-dark-red: #990000;
+  --nc-state-light-red: #FF3333;
+  --nc-state-black: #000000;
+  --nc-state-white: #FFFFFF;
+  --nc-state-gray: #666666;
+  
+  /* IEEE Blue accent */
+  --ieee-blue: #0066CC;
+  --ieee-light-blue: #3399FF;
+}
+
+/* Custom NC State themed classes */
+.nc-state-red {
+  color: var(--nc-state-red);
+}
+
+.nc-state-bg-red {
+  background-color: var(--nc-state-red);
+}
+
+.nc-state-border-red {
+  border-color: var(--nc-state-red);
+}
+
+.ieee-blue {
+  color: var(--ieee-blue);
+}
+
+.ieee-bg-blue {
+  background-color: var(--ieee-blue);
+}
+
+/* IEEE and NC State logo styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ieee-logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.ncstate-logo {
+  height: 2rem;
+  width: auto;
+}
+
+/* Responsive navigation styles */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus states for better keyboard navigation */
+button:focus,
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .nc-state-red {
+    color: #FF0000 !important;
+  }
+  
+  .ieee-blue {
+    color: #0000FF !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .desktop-nav,
+  .mobile-menu-btn,
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .nc-state-red,
+  .ieee-blue {
+    color: black !important;
+  }
+}
+
+/* Enhanced responsive typography */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure proper color contrast */
+.high-contrast {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* Scholarship page button hover effects */
+.scholarship-cta-button:hover {
+  opacity: 0.9;
+}
+
+.scholarship-secondary-button:hover {
+  background-color: var(--ieee-blue, #0066CC) !important;
+  color: white !important;
+}
+
+/* Gallery page button hover effects */
+.gallery-social-button:hover {
+  opacity: 0.9;
+}
+
+.gallery-secondary-button:hover {
+  background-color: var(--ieee-blue, #0066CC) !important;
+  color: white !important;
+}
+
+/* Global hover effect classes */
+.hover-opacity:hover {
+  opacity: 0.9;
+}
+
+.hover-blue-button:hover {
+  background-color: var(--ieee-blue, #0066CC) !important;
+  color: white !important;
+}
+
+.contact-social-button:hover {
+  background-color: var(--color) !important;
+  color: white !important;
+}
+
+/* Social media specific colors for hover */
+.contact-social-button[data-color="#1877F2"]:hover {
+  background-color: #1877F2 !important;
+  color: white !important;
+}
+
+.contact-social-button[data-color="#1DA1F2"]:hover {
+  background-color: #1DA1F2 !important;
+  color: white !important;
+}
+
+.contact-social-button[data-color="#0A66C2"]:hover {
+  background-color: #0A66C2 !important;
+  color: white !important;
+}
+
+.contact-social-button[data-color="#E4405F"]:hover {
+  background-color: #E4405F !important;
+  color: white !important;
+}
+
+.contact-social-button[data-color="#181717"]:hover {
+  background-color: #181717 !important;
+  color: white !important;
+}
+
+.contact-social-button[data-color="#FF0000"]:hover {
+  background-color: #FF0000 !important;
+  color: white !important;
+}
+
+/* Modern Navigation Styles */
+.desktop-nav {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-controls {
+    display: flex !important;
+  }
+  /* Show icon logo on small screens, hide wordmark */
+  .brand-icon { display: inline-block !important; }
+  .brand-wordmark { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .mobile-controls {
+    display: none !important;
+  }
+  /* Show wordmark on larger screens, hide icon */
+  .brand-icon { display: none !important; }
+  .brand-wordmark { display: inline-block !important; }
+}
+
+.nav-item:hover {
+  background-color: var(--neutral-alpha-weak) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--nav-link) !important;
+}
+
+.nav-active {
+  background: linear-gradient(135deg, var(--accent-alpha-weak), var(--brand-alpha-weak)) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: var(--nav-link-active) !important;
+}
+
+/* Mobile Navigation Animation */
+.mobile-nav {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme Toggle Enhancements */
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --surface: #111111;
+  --brand-background-strong: #CC0000;
+  --accent-background-strong: #0066CC;
+}
+
+/* Modern Glass Morphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .glass-card {  
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text Effects */
+.gradient-text {
+  background: linear-gradient(135deg, var(--brand-on-background-strong), var(--accent-on-background-strong));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern Button Animations */
+.modern-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.modern-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.modern-button:hover::before {
+  left: 100%;
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+.footer-nav-link:hover {
+  color: var(--nc-state-red, #CC0000) !important;
+}
+
+.footer-link-blue:hover {
+  color: var(--ieee-blue, #0066CC) !important;
+}
+
+.footer-social-icon:hover {
+  background-color: var(--ieee-blue, #0066CC) !important;
+  transform: translateY(-2px);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-button:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-alpha-strong);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-button:active {
+  transform: scale(0.95);
+}
+
+/* Modern Navigation Enhancements */
+.modern-nav {
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.06);
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--nav-border) !important;
+}
+
+[data-theme="dark"] .modern-nav {
+  --nav-bg: rgba(0, 0, 0, 0.75);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  background: var(--nav-bg) !important;
+  border-bottom: 1px solid var(--nav-border) !important;
+}
+
+.ieee-logo-modern:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}
+
+/* Advanced Navigation Item Effects */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-alpha-weak), var(--brand-alpha-weak));
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.nav-item:hover::before {
+  opacity: 0.1;
+}
+
+.nav-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--accent-on-background-strong) !important;
+}
+
+/* Mobile menu enhancements */
+.mobile-menu-btn {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+.mobile-menu-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, var(--accent-alpha-weak) 0%, transparent 70%);
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-menu-btn:hover::after {
+  width: 100px;
+  height: 100px;
+}
+
+/* Enhanced Mobile Navigation */
+.mobile-nav-enhanced {
+  animation: slideDownFade 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .mobile-nav-enhanced {
+  background: rgba(0, 0, 0, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-item:hover {
+  background: linear-gradient(135deg, var(--accent-alpha-weak), var(--brand-alpha-weak)) !important;
+  border-color: var(--accent-alpha-medium) !important;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global centered container utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center-text { text-align: center; }
+
+/* Utility for equal card heights inside grids */
+.grid-card { height: 100%; display: flex; }
+.grid-card > * { display: flex; flex-direction: column; width: 100%; }
+
+/* Navigation backdrop blur for better visibility */
+@supports (backdrop-filter: blur(20px)) {
+  .modern-nav {
+    backdrop-filter: blur(20px) !important;
+  }
+  
+  .mobile-nav-enhanced {
+    backdrop-filter: blur(20px) !important;
+  }
+}
+
+/* Hero Section Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(204, 0, 0, 0.4) !important;
+}
+
+/* Modern Card Styles */
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-background-strong), var(--accent-background-strong));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Layout Fixes */
+@media (max-width: 768px) {
+  .feature-card {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .feature-card {
+    flex: 1 1 45% !important;
+    max-width: 45% !important;
+  }
+}

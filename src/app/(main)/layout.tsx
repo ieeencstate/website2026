@@ -7,6 +7,9 @@ import classNames from "classnames";
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background} from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { SkipToMain } from '@/components/SkipToMain';
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -18,6 +21,7 @@ export async function generateMetadata() {
     image: meta.home.image,
     robots: meta.home.robots,
     alternates: meta.home.alternates,
+    // Additional SEO optimization will be handled per-page
   });
 }
 
@@ -149,7 +153,12 @@ export default function RootLayout({
               color: effects.lines.color,
             }}
           />
-          {children}
+          <SkipToMain />
+          <Navigation />
+          <main id="main-content" role="main" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
         </Column>
       </Providers>
     </Flex>
