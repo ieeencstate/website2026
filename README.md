@@ -266,9 +266,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🏆 Competition Credits
 
 **Website Designers:**
-- [John Bumgardner](https://github.com/johnbumgardner) - GitHub
-- [Sagnik Nayak](https://linkedin.com/in/sagnik-nayak) - LinkedIn  
-- [Adithya Balaji](https://adithyabalaji.com) - Portfolio
+- [Ohm Patel](https://ohmptl.com) - Portfolio
 
 **IEEE at NC State Student Branch**  
 Campus Box 7911  
@@ -276,8 +274,7 @@ Engineering Building II
 NC State University  
 Raleigh, NC 27695-7911  
 
-📧 ieeestudentbranch@ncsu.edu  
-🌐 [ieee.ncsu.edu](https://ieee.ncsu.edu)
+📧 ieeestudentbranch@ncsu.edu
 
 ---
 
