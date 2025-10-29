@@ -9,9 +9,9 @@ import {
   Meta,
 } from "@once-ui-system/core";
 import Link from "next/link";
-import { meta, baseURL } from "@/resources/once-ui.config";
-import { Container } from "@/components/Container";
-import { Section } from "@/components/Section";
+import { meta, baseURL } from "../resources/once-ui.config";
+import { Container } from "../components/Container";
+import { Section } from "../components/Section";
 
 // Export metadata for SEO
 export const metadata = {

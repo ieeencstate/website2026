@@ -6,8 +6,8 @@ import {
   Card,
   Badge,
 } from "@once-ui-system/core";
-import { Container } from "@/components/Container";
-import { Section } from "@/components/Section";
+import { Container } from "../components/Container";
+import { Section } from "../components/Section";
 
 export default function Scholarship() {
   return (

@@ -9,7 +9,7 @@ import {
 } from "@once-ui-system/core";
 import Link from "next/link";
 import Image from "next/image";
-import { social } from "@/resources/once-ui.config";
+import { social } from "../resources/once-ui.config";
 import { Container } from "./Container";
 
 const footerLinks = [

@@ -1,15 +1,15 @@
 import '@once-ui-system/core/css/styles.css';
 import '@once-ui-system/core/css/tokens.css';
-import '@/resources/custom.css'
+import './resources/custom.css'
 
 import classNames from "classnames";
 
-import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
+import { baseURL, meta, fonts, effects, style, dataStyle } from "./resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background} from "@once-ui-system/core";
-import { Providers } from '@/components/Providers';
-import { Navigation } from '@/components/Navigation';
-import { Footer } from '@/components/Footer';
-import { SkipToMain } from '@/components/SkipToMain';
+import { Providers } from './components/Providers';
+import { Navigation } from './components/Navigation';
+import { Footer } from './components/Footer';
+import { SkipToMain } from './components/SkipToMain';
 
 export async function generateMetadata() {
   return Meta.generate({
