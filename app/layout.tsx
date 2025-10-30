@@ -7,9 +7,7 @@ import classNames from "classnames";
 import { baseURL, meta, fonts, effects, style, dataStyle } from "./resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background} from "@once-ui-system/core";
 import { Providers } from './components/Providers';
-import { Navigation } from './components/Navigation';
-import { Footer } from './components/Footer';
-import { SkipToMain } from './components/SkipToMain';
+import { Navigation, Footer, SkipToMain } from './components/navbar';
 
 export async function generateMetadata() {
   return Meta.generate({

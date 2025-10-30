@@ -12,6 +12,7 @@ import Link from "next/link";
 import { meta, baseURL } from "../resources/once-ui.config";
 import { Container } from "../components/Container";
 import { Section } from "../components/Section";
+import { officers } from "../resources";
 
 // Export metadata for SEO
 export const metadata = {
@@ -24,57 +25,7 @@ export const metadata = {
   },
 };
 
-// Student Leaders data
-const officers = [
-  {
-    name: "Mario Rosas",
-    position: "President",
-    linkedin: "https://linkedin.com/in/mario-rosas", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/mario-rosas.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Soumyadeep Chatterjee", 
-    position: "Treasurer",
-    linkedin: "https://linkedin.com/in/soumyadeep-chatterjee", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/soumyadeep-chatterjee.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Jordan Boerger",
-    position: "VP - Robotics", 
-    linkedin: "https://linkedin.com/in/jordan-boerger", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/jordan-boerger.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Scott Burnett",
-    position: "VP - Company Outreach",
-    linkedin: "https://linkedin.com/in/scott-burnett", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/scott-burnett.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Jeffery Lima",
-    position: "VP - Company Outreach",
-    linkedin: "https://linkedin.com/in/jeffery-lima", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/jeffery-lima.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Grayson Morris",
-    position: "Webmaster",
-    linkedin: "https://linkedin.com/in/grayson-morris", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/grayson-morris.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Devin Roberts",
-    position: "Secretary",
-    linkedin: "https://linkedin.com/in/devin-roberts", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/devin-roberts.jpg", // TODO: Add actual image
-  },
-  {
-    name: "Ter Chavez",
-    position: "VP - Student Outreach",
-    linkedin: "https://linkedin.com/in/ter-chavez", // TODO: Replace with actual LinkedIn
-    image: "/images/officers/ter-chavez.jpg", // TODO: Add actual image
-  },
-];
+// officers imported from shared resources
 
 export default function About() {
   return (

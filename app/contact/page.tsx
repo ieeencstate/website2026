@@ -7,83 +7,7 @@ import {
 } from "@once-ui-system/core";
 import { Container } from "../components/Container";
 import { Section } from "../components/Section";
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    icon: "facebook",
-    url: "https://www.facebook.com/ieeeNCState",
-    description: "Follow us for event updates, photos, and community discussions."
-  },
-  {
-    name: "Twitter",
-    icon: "twitter", 
-    url: "https://twitter.com/ieeeNCState",
-    description: "Get real-time updates and engage with our community."
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    url: "https://www.linkedin.com/company/ieee-nc-state/",
-    description: "Connect professionally and explore career opportunities."
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    url: "https://www.instagram.com/ieee_ncstate/",
-    description: "See behind-the-scenes content and event highlights."
-  },
-  {
-    name: "GitHub",
-    icon: "github",
-    url: "https://github.com/ieee-ncstate",
-    description: "Explore our open-source projects and code repositories."
-  },
-  {
-    name: "YouTube",
-    icon: "youtube",
-    url: "https://www.youtube.com/c/IEEENCState",
-    description: "Watch technical presentations and event recordings."
-  },
-];
-
-function getSocialIcon(platform: string) {
-  switch (platform) {
-    case "facebook":
-      return "📘";
-    case "twitter":
-      return "🐦";
-    case "linkedin":
-      return "💼";
-    case "instagram":
-      return "📸";
-    case "github":
-      return "👨‍💻";
-    case "youtube":
-      return "📺";
-    default:
-      return "🔗";
-  }
-}
-
-function getSocialColor(platform: string) {
-  switch (platform) {
-    case "facebook":
-      return "#1877F2";
-    case "twitter":
-      return "#1DA1F2";
-    case "linkedin":
-      return "#0A66C2";
-    case "instagram":
-      return "#E4405F";
-    case "github":
-      return "#181717";
-    case "youtube":
-      return "#FF0000";
-    default:
-      return "var(--ieee-blue, #0066CC)";
-  }
-}
+import { contactInfo, socialLinks, getSocialIcon, getSocialColor } from "../resources";
 
 export default function Contact() {
   return (
@@ -143,7 +67,7 @@ export default function Contact() {
                           Email
                         </Heading>
                         <Text variant="body-default-m">
-                          ieeestudentbranch@ncsu.edu
+                          {contactInfo.email}
                         </Text>
                       </Column>
                     </Row>
@@ -152,7 +76,7 @@ export default function Contact() {
                     </Text>
                     
                     <a 
-                      href="mailto:ieeestudentbranch@ncsu.edu"
+                      href={`mailto:${contactInfo.email}`}
                       style={{ textDecoration: "none" }}
                     >
                       <div
@@ -204,11 +128,11 @@ export default function Contact() {
                           Office Location
                         </Heading>
                         <Text variant="body-default-m">
-                          IEEE Student Branch<br/>
-                          Campus Box 7911<br/>
-                          Engineering Building II<br/>
-                          NC State University<br/>
-                          Raleigh, NC 27695-7911
+                          {contactInfo.addressLines[0]}<br/>
+                          {contactInfo.addressLines[1]}<br/>
+                          {contactInfo.addressLines[2]}<br/>
+                          {contactInfo.addressLines[3]}<br/>
+                          {contactInfo.addressLines[4]}
                         </Text>
                       </Column>
                     </Row>
