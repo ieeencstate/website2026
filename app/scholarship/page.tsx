@@ -1,13 +1,53 @@
-import {
-  Heading,
-  Text,
-  Column,
-  Row,
-  Card,
-  Badge,
-} from "@once-ui-system/core";
 import { Container } from "../components/Container";
 import { Section } from "../components/Section";
+import React from 'react';
+
+// Helper components to replace once-ui
+const Heading = ({ variant, className, children, ...props }: any) => {
+  const Tag = variant?.includes('display') ? 'h1' : variant?.includes('heading-strong') ? 'h2' : 'h3';
+  const classes = variant?.includes('display-strong-xl') ? 'text-5xl font-bold' :
+                  variant?.includes('heading-strong-l') ? 'text-3xl font-bold' :
+                  variant?.includes('heading-default-m') ? 'text-xl font-semibold' :
+                  variant?.includes('heading-default-s') ? 'text-lg font-semibold' : 'text-2xl font-semibold';
+  return React.createElement(Tag, { className: `${classes} ${className || ''}`, ...props }, children);
+};
+
+const Text = ({ variant, className, children, style, marginBottom, weight, onBackground, ...props }: any) => {
+  const classes = variant?.includes('heading-default-l') ? 'text-2xl' :
+                  variant?.includes('body-default-l') ? 'text-lg' :
+                  variant?.includes('body-default-m') ? 'text-base' :
+                  variant?.includes('body-default-s') ? 'text-sm' :
+                  variant?.includes('label-default-s') ? 'text-sm' : 'text-base';
+  const mbClass = marginBottom === 'l' ? 'mb-6' : marginBottom === 'm' ? 'mb-4' : marginBottom === 's' ? 'mb-2' : '';
+  const weightClass = weight === 'strong' ? 'font-bold' : '';
+  return <p className={`${classes} ${mbClass} ${weightClass} ${className || ''}`} style={style} {...props}>{children}</p>;
+};
+
+const Column = ({ gap, align, children, style, className, fillWidth, maxWidth, padding, ...props }: any) => {
+  const gapClasses = gap === 'xl' ? 'gap-8' : gap === 'l' ? 'gap-6' : gap === 'm' ? 'gap-4' : gap === 's' ? 'gap-2' : 'gap-4';
+  const alignClasses = align === 'center' ? 'items-center' : '';
+  const widthClass = fillWidth ? 'w-full' : '';
+  const maxWidthClass = maxWidth === 'xl' ? 'max-w-4xl' : maxWidth === 'l' ? 'max-w-3xl' : maxWidth === 'm' ? 'max-w-2xl' : '';
+  const paddingClass = padding === '0' ? 'p-0' : '';
+  return <div className={`flex flex-col ${gapClasses} ${alignClasses} ${widthClass} ${maxWidthClass} ${paddingClass} ${className || ''}`} style={style} {...props}>{children}</div>;
+};
+
+const Row = ({ gap, align, wrap, children, style, className, ...props }: any) => {
+  const gapClasses = gap === 'xl' ? 'gap-8' : gap === 'l' ? 'gap-6' : gap === 'm' ? 'gap-4' : gap === 's' ? 'gap-2' : 'gap-4';
+  const alignClasses = align === 'center' ? 'items-center' : align === 'flex-start' ? 'items-start' : '';
+  const wrapClass = wrap ? 'flex-wrap' : '';
+  return <div className={`flex ${gapClasses} ${alignClasses} ${wrapClass} ${className || ''}`} style={style} {...props}>{children}</div>;
+};
+
+const Card = ({ padding, children, className, style, border, ...props }: any) => {
+  const paddingClasses = padding === 'xl' ? 'p-12' : padding === 'l' ? 'p-8' : padding === 'm' ? 'p-6' : padding === 's' ? 'p-4' : padding === '0' ? 'p-0' : 'p-6';
+  const borderClass = border ? 'border border-gray-200' : '';
+  return <div className={`${paddingClasses} ${borderClass} ${className || ''}`} style={style} {...props}>{children}</div>;
+};
+
+const Badge = ({ children, className, style, ...props }: any) => {
+  return <span className={`inline-block px-2 py-1 text-xs font-semibold rounded ${className || ''}`} style={style} {...props}>{children}</span>;
+};
 
 export default function Scholarship() {
   return (

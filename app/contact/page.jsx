@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { Linkedin, Github, Instagram, MessageCircle, Mail } from "lucide-react";
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar.jsx';
 import { contactInfo, heroSocialLinks } from '../lib/resources';
 
 const TerminalContact = () => {
