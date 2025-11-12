@@ -91,7 +91,7 @@ export default function Scholarship() {
                 This scholarship recognizes students who not only excel academically but also demonstrate leadership qualities, innovative thinking, and a commitment to making a positive impact in their field and community.
               </Text>
               <Text variant="body-default-l">
-                Named in honor of Dr. Stancil's contributions to electrical engineering education and research, this scholarship continues his legacy of fostering the next generation of engineers.
+                Named in honor of Dr. Stancil&apos;s contributions to electrical engineering education and research, this scholarship continues his legacy of fostering the next generation of engineers.
               </Text>
             </Column>
 
@@ -287,7 +287,7 @@ export default function Scholarship() {
                 </Text>
                 
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                  Sara's work in sustainable energy systems and her commitment to mentoring younger students demonstrate the kind of impactful leadership this scholarship aims to recognize and support.
+                  Sara&apos;s work in sustainable energy systems and her commitment to mentoring younger students demonstrate the kind of impactful leadership this scholarship aims to recognize and support.
                 </Text>
               </Column>
             </Row>
@@ -399,7 +399,7 @@ export default function Scholarship() {
               Apply for the Scholarship
             </Heading>
             <Text variant="body-default-l" onBackground="neutral-weak">
-              If you're an ECE student who demonstrates academic excellence and leadership impact, we encourage you to apply for this prestigious scholarship.
+              If you&apos;re an ECE student who demonstrates academic excellence and leadership impact, we encourage you to apply for this prestigious scholarship.
             </Text>
             <Row gap="m" wrap>
               <Card padding="0" style={{ background: "transparent" }}>

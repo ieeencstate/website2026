@@ -100,7 +100,7 @@ export default function Gallery() {
             </Heading>
             
             <Text variant="body-default-l" onBackground="neutral-weak" style={{ maxWidth: "500px" }}>
-              We're working on integrating our Google Photos gallery to showcase all the amazing moments from our IEEE events, workshops, and activities.
+              We&apos;re working on integrating our Google Photos gallery to showcase all the amazing moments from our IEEE events, workshops, and activities.
             </Text>
 
             <Text variant="body-default-m" onBackground="neutral-weak">
@@ -113,10 +113,10 @@ export default function Gallery() {
         <Section padding="xl">
           <Column maxWidth="xl" gap="l" style={{ margin: "0 auto" }}>
             <Heading variant="heading-strong-l" className="nc-state-red">
-              What You'll See
+              What You&apos;ll See
             </Heading>
             <Text variant="body-default-l" onBackground="neutral-weak" marginBottom="m">
-              Once our gallery is live, you'll be able to browse photos from these activities:
+              Once our gallery is live, you&apos;ll be able to browse photos from these activities:
             </Text>
 
             <div className="auto-grid" style={{ width: "100%" }}>

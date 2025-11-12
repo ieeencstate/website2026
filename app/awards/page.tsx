@@ -303,7 +303,7 @@ export default function Awards() {
                   Website Design
                 </Heading>
                 <Text onBackground="neutral-weak">
-                  Creating innovative, user-friendly websites that effectively communicate our chapter's mission and activities.
+                  Creating innovative, user-friendly websites that effectively communicate our chapter&apos;s mission and activities.
                 </Text>
                 <Badge
                   textVariant="label-default-xs"
