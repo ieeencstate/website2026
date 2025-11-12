@@ -1,5 +1,5 @@
 'use client';
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/navbar.jsx";
 import { Hero } from "./components/Hero";
 import OppoScroll from "./components/OppoScroll";
 import { Leva } from "leva";
