@@ -1,18 +1,22 @@
 import React from 'react';
 
+type SectionPadding = "s" | "m" | "l" | "xl";
+
+type SectionProps = {
+  children: React.ReactNode;
+  padding?: SectionPadding;
+  background?: string;
+  border?: boolean | string;
+  radius?: string;
+};
+
 export function Section({ 
   children, 
   padding = "xl", 
   background,
   border,
   radius 
-}: { 
-  children: React.ReactNode; 
-  padding?: string;
-  background?: string;
-  border?: string;
-  radius?: string;
-}) {
+}: SectionProps) {
   const paddingClasses = {
     s: "p-4",
     m: "p-6",
@@ -20,7 +24,7 @@ export function Section({
     xl: "p-12",
   };
   
-  const className = `${paddingClasses[padding as keyof typeof paddingClasses] || paddingClasses.xl} ${
+  const className = `${paddingClasses[padding] || paddingClasses.xl} ${
     background === "surface" ? "bg-white dark:bg-gray-800" : ""
   } ${border ? "border border-gray-200 dark:border-gray-700" : ""} ${
     radius === "l" ? "rounded-lg" : ""
@@ -28,4 +32,5 @@ export function Section({
   
   return <section className={className}>{children}</section>;
 }
+
 
