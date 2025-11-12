@@ -139,7 +139,6 @@ export const navbarContent = {
   items: [
     { label: 'Home', href: '/' },
     { label: 'Events', href: '/events' },
-    { label: 'Awards', href: '/awards'},
     { label: 'Contact', href: '/contact' },
   ]
 };
