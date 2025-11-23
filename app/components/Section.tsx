@@ -10,9 +10,8 @@ export function Section({
   children: React.ReactNode; 
   padding?: string;
   background?: string;
-  border?: string;
+  border?: boolean | string;
   radius?: string;
-  boolean?: string;
 }) {
   const paddingClasses = {
     s: "p-4",

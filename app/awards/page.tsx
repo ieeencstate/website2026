@@ -424,7 +424,7 @@ export default function Awards() {
         </Section>
 
         {/* Call to Action */}
-        <Section padding="xl" background="surface" border radius="l">
+        <Section padding="xl" background="surface" border={true} radius="l">
         <Column 
           maxWidth="l" 
           gap="m"
