@@ -44,7 +44,6 @@ export function WorkSection() {
           ]);
         }
       } catch (error) {
-        console.error('Error fetching events:', error);
         // Fallback events
         setEvents([
           {

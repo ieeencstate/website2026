@@ -2,7 +2,6 @@
 
 import { Calendar } from 'lucide-react';
 import { useReveal } from '../../hooks/use-reveal';
-import { MagneticButton } from '../magnetic-button';
 import { eventsContent } from '../../../resources/index.js';
 
 export function CalendarSection() {
@@ -45,21 +44,6 @@ export function CalendarSection() {
                   {eventsContent.subscribe.subscribeLinkText}
                 </p>
               </a>
-
-              <div
-                className={`flex gap-2 pt-2 transition-all duration-700 md:pt-4 ${
-                  isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
-                }`}
-                style={{ transitionDelay: '350ms' }}
-              >
-                <MagneticButton
-                  variant="primary"
-                  size="lg"
-                  onClick={() => window.open(eventsContent.calendar.subscribeUrl, '_blank')}
-                >
-                  {eventsContent.subscribe.buttonText}
-                </MagneticButton>
-              </div>
             </div>
           </div>
 

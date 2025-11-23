@@ -6,10 +6,8 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light');
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     // Check localStorage for saved theme preference
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('events-theme');

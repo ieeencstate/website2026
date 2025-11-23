@@ -1,7 +1,6 @@
 'use client';
 
 import { Shader, ChromaFlow, Swirl } from 'shaders/react';
-import { CustomCursor } from './components/custom-cursor';
 import { GrainOverlay } from './components/grain-overlay';
 import { WorkSection } from './components/sections/work-section';
 import { ServicesSection } from './components/sections/services-section';
@@ -83,7 +82,7 @@ function EventsPageContent() {
       const deltaY = touchStartY.current - touchEndY;
       const deltaX = touchStartX.current - touchEndX;
 
-        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
+      if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
         if (deltaY > 0 && currentSection < 3) {
           scrollToSection(currentSection + 1);
         } else if (deltaY < 0 && currentSection > 0) {
@@ -205,7 +204,6 @@ function EventsPageContent() {
     >
       <ThemeToggle />
       <Navbar />
-      <CustomCursor />
       <GrainOverlay />
 
       <div
