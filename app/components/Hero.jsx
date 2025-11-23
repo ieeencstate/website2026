@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { GL } from "./gl";
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { Linkedin, Github, Instagram, MessageCircle, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import JoinUsButton from "./joinusbutton";
 import { heroContent, heroSocialLinks } from "../lib/resources";
+
+const GL = dynamic(() => import("./gl").then(mod => ({ default: mod.GL })), {
+  ssr: false,
+});
 
 export function Hero() {
   const [hovering, setHovering] = useState(false);

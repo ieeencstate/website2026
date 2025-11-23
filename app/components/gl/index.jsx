@@ -1,3 +1,5 @@
+'use client';
+
 import { Effects } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
@@ -40,6 +42,7 @@ export const GL = ({ hovering, backgroundOpacity = 1 }) => {
     useManualTime: { value: false },
     manualTime: { value: 0, min: 0, max: 50, step: 0.01 },
   });
+
   return (
     <div id="webgl" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: 0, pointerEvents: 'none', opacity: backgroundOpacity, transition: 'opacity 0.3s ease-out' }}>
       <Canvas

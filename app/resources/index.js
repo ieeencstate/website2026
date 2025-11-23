@@ -76,4 +76,58 @@ export function getSocialColor(platform) {
   }
 }
 
+// Events page content
+export const eventsContent = {
+  // Hero section
+  hero: {
+    title: "Workshops and Events",
+    description: "Stay connected with IEEE NCSU. Discover upcoming workshops, speaker events, and competitions including IEEE SoutheastCon.",
+    subscribeButtonText: "Subscribe to Calendar",
+  },
+
+  // Featured section (Upcoming Events)
+  featured: {
+    title: "Featured",
+    subtitle: "/ Upcoming events",
+  },
+
+  // Categories section
+  categories: {
+    title: "Categories",
+    subtitle: "/ Event types we host",
+    items: [
+      {
+        title: "Workshops",
+        description: "Hands-on learning sessions covering technical skills, tools, and emerging technologies",
+        direction: "top",
+      },
+      {
+        title: "Speaker Events",
+        description: "Career-focused talks and networking opportunities with industry professionals",
+        direction: "right",
+      },
+      {
+        title: "Competitions",
+        description: "IEEE SoutheastCon and other competitive events to showcase your skills",
+        direction: "left",
+      },
+    ],
+  },
+
+  // Subscribe section
+  subscribe: {
+    title: "Subscribe",
+    subtitle: "/ Subscribe to our calendar",
+    subscribeLinkText: "Add to Google Calendar",
+    buttonText: "Subscribe to Calendar",
+  },
+
+  // Google Calendar configuration
+  calendar: {
+    calendarId: "ncsu.edu_ngl6n4iuvhssd5d3730d3db1os@group.calendar.google.com",
+    subscribeUrl: "https://calendar.google.com/calendar?cid=bmNzdS5lZHVfbmdsNm40aXV2aHNzZDVkMzczMGQzZGIxb3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ",
+    embedUrl: "https://calendar.google.com/calendar/embed?src=ncsu.edu_ngl6n4iuvhssd5d3730d3db1os%40group.calendar.google.com&ctz=America%2FNew_York",
+  },
+};
+
 
